@@ -1,0 +1,305 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  android:background="#FF000000"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    >
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:text="INFO"
+        android:layout_marginRight="-5dp"
+        android:layout_marginLeft="-5dp"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:background="#FF000000"
+        android:onClick="viewLayout1"
+        android:id="@+id/button_info"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:text="INGREDIENTS"
+        android:layout_marginLeft="-5dp"
+        android:textSize="15dp"
+        android:layout_marginRight="-5dp"
+        android:onClick="viewLayout2"
+        android:id="@+id/button_ingredients"
+        android:layout_alignBottom="@+id/button_info"
+        android:layout_toRightOf="@+id/button_info"
+        android:layout_toEndOf="@+id/button_info"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:text="INSTRUCTIONS"
+        android:layout_marginLeft="-5dp"
+        android:textSize="15dp"
+        android:textColor="#ffffffff"
+        android:onClick="viewLayout3"
+        android:id="@+id/button_instructions"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/button_ingredients"
+        android:layout_toEndOf="@+id/button_ingredients" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="620dp"
+        android:layout_below="@+id/button_info"
+        android:layout_alignRight="@+id/button_instructions"
+        android:layout_alignEnd="@+id/button_instructions"
+        android:id="@+id/frameLayout">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|top"
+                android:id="@+id/layout_info">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="TITLE"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:id="@+id/textViewTitle" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:background="#FF5F5F5F"
+                    android:alpha="0.8"
+                    android:hint="Eg. Americano"
+                    android:maxLength="30"
+                    android:textCursorDrawable="@null"
+                    android:id="@+id/editTextTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="DESCRIPTION"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="20dp"
+                    android:id="@+id/textViewDescription" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:inputType="textMultiLine"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:background="#FF5F5F5F"
+                    android:alpha="0.8"
+                    android:hint="Eg. An Americano is an espresso-based drink designed to resemble coffee brewed..."
+                    android:ems="10"
+                    android:textCursorDrawable="@null"
+                    android:id="@+id/editTextDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="YIELD"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:id="@+id/textViewYield" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:background="#FF5F5F5F"
+                    android:alpha="0.8"
+                    android:hint="Eg. 5"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null"
+                    android:id="@+id/editTextYield" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="ACTIVE TIME"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:id="@+id/textViewActive" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:background="#FF5F5F5F"
+                    android:alpha="0.8"
+                    android:hint="Eg. 5"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null"
+                    android:id="@+id/editTextActive" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="TOTAL TIME"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:id="@+id/textViewTotal" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:background="#FF5F5F5F"
+                    android:alpha="0.8"
+                    android:hint="Eg. 5"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null"
+                    android:id="@+id/editTextTotal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="IMAGE"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:id="@+id/textViewIMAGE" />
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/imageView"
+                    android:text="No Image Selected"
+                    android:textColor="#FFFFFFFF"
+                    android:background="#FF5F5F5F"
+                    android:alpha="0.8"
+                    android:textCursorDrawable="@null"
+                    android:layout_below="@+id/textViewIMAGE"
+                    android:layout_alignLeft="@+id/textViewIMAGE"
+                    android:layout_alignStart="@+id/textViewIMAGE" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="*Please select a image"
+                    android:textSize="20dp"
+                    android:textColor="#ffff090e"
+                    android:id="@+id/textView"
+                    android:layout_alignLeft="@+id/textViewIMAGE"
+                    android:layout_alignStart="@+id/textViewIMAGE" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="NOTES"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:id="@+id/textViewNotes" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFFFF"
+                    android:background="#FF5F5F5F"
+                    android:alpha="0.8"
+                    android:hint="Eg. Having the coffee with a piece of biscuit..."
+                    android:textCursorDrawable="@null"
+                    android:id="@+id/editTextNotes" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_ingredients"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Type in your ingredients: "
+                android:textSize="20dp"
+                android:textColor="#FFFFFFFF"
+                android:id="@+id/textViewExample1" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="450dp"
+                android:textSize="20dp"
+                android:textColor="#FFFFFFFF"
+                android:background="#FF5F5F5F"
+                android:alpha="0.8"
+                android:textCursorDrawable="@null"
+                android:id="@+id/editTextExample1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_instructions"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Type in your instruction: "
+                android:textSize="20dp"
+                android:textColor="#FFFFFFFF"
+                android:id="@+id/textViewExample2" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="450dp"
+                android:textSize="20dp"
+                android:textColor="#FFFFFFFF"
+                android:background="#FF5F5F5F"
+                android:alpha="0.8"
+                android:textCursorDrawable="@null"
+                android:id="@+id/editTextExample2" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <Button
+        android:layout_width="675dp"
+        android:layout_height="50dp"
+        android:text="Cancel"
+        android:layout_marginRight="-5dp"
+        android:layout_marginLeft="-5dp"
+        android:textColor="#FFFFFFFF"
+        android:id="@+id/button_cancel"
+        android:layout_below="@+id/frameLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="cancel"/>
+
+    <Button
+        android:layout_width="675dp"
+        android:layout_height="50dp"
+        android:text="Save"
+        android:layout_marginLeft="-5dp"
+        android:textColor="#FFFFFFFF"
+        android:onClick="buttonSave"
+        android:id="@+id/button_save"
+        android:layout_below="@+id/frameLayout"
+        android:layout_toRightOf="@+id/button_cancel"
+        android:layout_toEndOf="@+id/button_cancel" />
+</RelativeLayout>
